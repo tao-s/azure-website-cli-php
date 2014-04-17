@@ -27,7 +27,7 @@ $_SESSION["token"] = $token;
     <h2>実行結果</h2>
     <p><?php echo $return_var; ?></p>
     <pre>
-    <?php echo htmlspecialchars($res,ENT_QUOTE); ?>
+    <?php echo htmlspecialchars(mb_convert_encoding($res,"UTF-8","SJIS"),ENT_QUOTES); ?>
     </pre>
 </div>
 <?php } ?>
