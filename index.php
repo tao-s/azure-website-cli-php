@@ -28,5 +28,8 @@ $_SESSION["token"] = $token;
 </div>
 <?php } ?>
 </form>
+<?php 
+    phpinfo();
+?>
 </body>
 </html>
